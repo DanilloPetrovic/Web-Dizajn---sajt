@@ -28,16 +28,40 @@ body {
   background-color: var(--background);
 }
 
+/* Wrapps */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-background {
+  box-shadow: 0px 2px 5px lightgrey;
+  background-color: var(--headerbg);
+}
+
+#second-section-background {
+  background-color: var(--headerbg);
+}
+
+#third-section-background {
+  background-color: var(--third-section-bg);
+}
+
+.footer-background {
+  background-color: var(--commentbg);
+}
+
 /* Header */
 
 header {
-  width: 100%;
+  width: 75%;
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--headerbg);
-  box-shadow: 0px 0px 10px lightgrey;
 }
 
 #nav-logo {
@@ -84,17 +108,23 @@ header {
   background-color: var(--logocolor);
 }
 
-/* Prva Sekcija - Home */
+/* Prva Sekcija - Početna */
 
 #first-section {
-  padding: 50px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 75%;
+  margin: 50px 0px;
 }
 
-#first-section-left {
+#first-section div {
   width: 50%;
+}
+
+#first-section-right {
+  display: flex;
+  justify-content: end;
 }
 
 #first-section-logo {
@@ -114,7 +144,7 @@ header {
 }
 
 #first-section-img {
-  width: 40%;
+  width: 90%;
   border-radius: 5%;
   box-shadow: 0px 0px 20px rgb(186, 186, 186);
 }
@@ -153,15 +183,15 @@ header {
   color: var(--background);
 }
 
-/* druga sekcija */
+/* Druga Sekcija - Početna */
 
 #second-section {
-  padding: 100px;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--headerbg);
+  margin: 100px 0px;
 }
 
 #second-section-h2 {
@@ -181,19 +211,19 @@ header {
   margin-top: 50px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 20px;
 }
 
 .second-section-card {
   background-color: var(--cardbg);
-  padding: 25px;
-  float: left;
+  padding: 25px 5px;
   border-radius: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 33%;
 }
 
 .second-section-card:hover {
@@ -220,11 +250,26 @@ header {
   font-weight: 300;
 }
 
-/* treca sekcija */
+#o-nama-button-home {
+  margin-top: 30px;
+  background-color: var(--logocolor);
+  color: var(--background);
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: 3px solid var(--logocolor);
+  transition: 0.2s ease-in-out;
+}
+
+#o-nama-button-home:hover {
+  background-color: transparent;
+  color: var(--logocolor);
+}
+
+/* Treća Sekcija - Početna */
 
 #third-section {
-  padding: 100px;
-  background-color: var(--third-section-bg);
+  margin: 100px 0px;
+  width: 75%;
 }
 
 #third-section-h2 {
@@ -252,7 +297,6 @@ header {
   background-color: var(--commentbg);
   padding: 30px;
   border-radius: 5%;
-  width: 300px;
 }
 
 .third-section-comment .fa-star {
@@ -273,11 +317,11 @@ header {
   font-size: 18px;
 }
 
-/* footer */
+/* Footer */
 
 footer {
-  padding: 50px;
-  background-color: var(--commentbg);
+  width: 75%;
+  margin: 50px 0px;
 }
 
 #footer-up {
@@ -372,13 +416,14 @@ footer ul li a:hover {
 #o-autoru-wrap {
   display: flex;
   justify-content: center;
-  margin: 50px;
+  margin: 50px 0px;
+  width: 75%;
 }
 
 #o-autoru {
   display: flex;
   justify-items: center;
-  width: 75%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -400,37 +445,22 @@ footer ul li a:hover {
 }
 
 #o-autoru-text {
-  margin: 30px;
+  margin: 0px 30px;
 }
 
 /* kontakt */
 
-#contact-wrap {
+#contact-wrapper {
+  margin: 50px 0px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px;
 }
 
 #contact-wrap h1 {
   text-align: center;
   color: var(--logocolor);
   margin-bottom: 30px;
-}
-
-#contact-content {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
-  border-radius: 10px;
-  gap: 50px;
-  width: 75%;
-}
-
-#contact-form-div,
-#contact-info {
-  width: 50%;
 }
 
 #contact-form-div {
@@ -443,6 +473,18 @@ footer ul li a:hover {
 #contact-form {
   display: flex;
   flex-direction: column;
+}
+
+#contact-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 10px;
+  width: 75%;
+}
+
+#contact-content div {
+  width: 100%;
 }
 
 #contact-form input,
@@ -493,13 +535,11 @@ footer ul li a:hover {
 .contact-profil {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-bottom: 20px;
   background-color: #f0ecff;
-  padding: 15px;
-  width: 100%;
   border-radius: 10px;
   margin-top: 20px;
+  padding: 10px 0px;
 }
 
 .contact-profil:hover {
@@ -509,15 +549,20 @@ footer ul li a:hover {
 }
 
 .contact-profil span {
-  font-size: 22px;
-  width: 40px;
-  height: 40px;
+  font-size: 24px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--background);
   background-color: var(--logocolor);
-  border-radius: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.contact-profil div {
+  margin-left: 10px;
 }
 
 .contact-profil h3 {
@@ -554,7 +599,8 @@ footer ul li a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
+  width: 75%;
+  padding: 50px 0px;
 }
 
 #katalog-container h1 {
@@ -572,7 +618,7 @@ footer ul li a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  padding: 50px;
+  padding: 50px 0px;
 }
 
 .pozivnica-kartica {
@@ -631,17 +677,23 @@ footer ul li a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 10px;
   margin-top: 10px;
+  background-color: var(--logocolor);
+  border-radius: 0px 0px 8px 8px;
+  padding: 10px;
 }
 
 .opis-div .fa,
 .opis-div .fa-solid {
-  color: var(--logocolor);
+  color: var(--background);
 }
 
 .opis-div .fa-fire-flame-curved {
   color: #ff6f61;
+}
+
+.opis-div p {
+  color: var(--background);
 }
 
 .opis-div .fa-star {
